@@ -1,0 +1,61 @@
+<svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo verde escuro com padrão de notas -->
+  <defs>
+    <pattern id="moneyPattern" x="0" y="0" width="60" height="30" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="60" height="30" fill="none"/>
+      <text x="30" y="20" font-family="Arial, sans-serif" font-size="8" fill="#2d5016" text-anchor="middle">$</text>
+    </pattern>
+  </defs>
+  
+  <!-- Fundo principal -->
+  <rect width="400" height="600" fill="#1a4d2e"/>
+  <rect width="400" height="600" fill="url(#moneyPattern)" opacity="0.3"/>
+  
+  <!-- Logo MEU TRAFEGO -->
+  <rect x="20" y="30" width="80" height="25" fill="#8b5cf6" rx="4"/>
+  <text x="60" y="45" font-family="Arial, sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle" font-weight="bold">MEU TRAFEGO</text>
+  
+  <!-- Título principal -->
+  <text x="200" y="120" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">COMO CRIAR UMA</text>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">RENDA EXTRA</text>
+  
+  <!-- Subtítulo -->
+  <text x="200" y="200" font-family="Georgia, serif" font-size="20" fill="white" text-anchor="middle" font-style="italic">Criando Produtos Digitais</text>
+  
+  <!-- Descrição -->
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">ASSOCIADO AO</text>
+  <text x="200" y="275" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">MARKETING DIGITAL</text>
+  
+  <!-- Mãos tricotando -->
+  <g transform="translate(200, 450)">
+    <!-- Mão esquerda -->
+    <ellipse cx="-40" cy="0" rx="25" ry="35" fill="#ff8c00"/>
+    <ellipse cx="-40" cy="0" rx="20" ry="30" fill="#ffa500"/>
+    
+    <!-- Mão direita -->
+    <ellipse cx="40" cy="0" rx="25" ry="35" fill="#ff8c00"/>
+    <ellipse cx="40" cy="0" rx="20" ry="30" fill="#ffa500"/>
+    
+    <!-- Agulhas de tricô -->
+    <line x1="-60" y1="-20" x2="-60" y2="20" stroke="#c0c0c0" stroke-width="3"/>
+    <line x1="60" y1="-20" x2="60" y2="20" stroke="#c0c0c0" stroke-width="3"/>
+    <circle cx="-60" cy="-20" r="2" fill="#228b22"/>
+    <circle cx="60" cy="-20" r="2" fill="#228b22"/>
+    
+    <!-- Nota de dólar sendo "tricotada" -->
+    <rect x="-30" y="-25" width="60" height="40" fill="#228b22" rx="3"/>
+    <text x="0" y="-5" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">10</text>
+    <text x="-15" y="5" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">NEGOCIO</text>
+    
+    <!-- Cabeça com balão de pensamento -->
+    <circle cx="0" cy="15" r="8" fill="#ff8c00"/>
+    <path d="M 8 15 Q 15 10 20 15" stroke="#ff8c00" stroke-width="2" fill="none"/>
+    <circle cx="22" cy="13" r="3" fill="#ff8c00"/>
+  </g>
+  
+  <!-- Linhas de tricô -->
+  <path d="M 100 430 Q 200 450 300 430" stroke="#228b22" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 100 440 Q 200 460 300 440" stroke="#228b22" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 100 450 Q 200 470 300 450" stroke="#228b22" stroke-width="2" fill="none" opacity="0.7"/>
+</svg>
+

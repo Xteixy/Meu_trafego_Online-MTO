@@ -1,0 +1,225 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ========================================
+// MODELOS PRINCIPAIS
+// ========================================
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  company   String?
+  phone     String?
+  plan      Plan     @default(STARTER)
+  avatar    String?
+  isActive  Boolean  @default(true)
+  emailVerified Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relações
+  campaigns    Campaign[]
+  payments     Payment[]
+  notifications Notification[]
+  
+  @@map("users")
+}
+
+model Campaign {
+  id             String   @id @default(cuid())
+  name           String
+  objective      String
+  budget         Decimal  @db.Decimal(10, 2)
+  duration       String
+  targetAudience String
+  description    String?
+  status         CampaignStatus @default(DRAFT)
+  platforms      String[] // Array de plataformas sociais
+  startDate      DateTime?
+  endDate        DateTime?
+  
+  // Relações
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  analytics Analytics[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("campaigns")
+}
+
+model Payment {
+  id        String   @id @default(cuid())
+  amount    Decimal  @db.Decimal(10, 2)
+  currency  String   @default("BRL")
+  method    PaymentMethod
+  status    PaymentStatus @default(PENDING)
+  stripeId  String?  @unique
+  description String?
+  
+  // Relações
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("payments")
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      NotificationType
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  actionUrl String?
+  priority  Priority @default(MEDIUM)
+  
+  // Relações
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("notifications")
+}
+
+model Analytics {
+  id         String   @id @default(cuid())
+  campaignId String
+  campaign   Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  
+  // Métricas principais
+  impressions    Int
+  clicks        Int
+  conversions   Int
+  spend         Decimal @db.Decimal(10, 2)
+  revenue       Decimal @db.Decimal(10, 2)
+  ctr           Decimal @db.Decimal(5, 4) // Click-through rate
+  cpc           Decimal @db.Decimal(10, 4) // Cost per click
+  cpa           Decimal @db.Decimal(10, 4) // Cost per acquisition
+  
+  // Data da métrica
+  date DateTime
+  
+  createdAt DateTime @default(now())
+  
+  @@map("analytics")
+}
+
+// ========================================
+// MODELOS DE SUPORTE
+// ========================================
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  price       Decimal  @db.Decimal(10, 2)
+  currency    String   @default("BRL")
+  category    ServiceCategory
+  isActive    Boolean  @default(true)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("services")
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  message   String
+  subject   String?
+  status    ContactStatus @default(NEW)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("contacts")
+}
+
+// ========================================
+// ENUMS
+// ========================================
+
+enum Plan {
+  STARTER      // Plano básico
+  PROFESSIONAL // Plano profissional
+  ENTERPRISE   // Plano empresarial
+}
+
+enum CampaignStatus {
+  DRAFT       // Rascunho
+  PENDING     // Pendente de aprovação
+  ACTIVE      // Ativa
+  PAUSED      // Pausada
+  COMPLETED   // Concluída
+  CANCELLED   // Cancelada
+}
+
+enum PaymentMethod {
+  CREDIT_CARD    // Cartão de crédito
+  PIX            // PIX
+  PAYPAL         // PayPal
+  BANK_TRANSFER  // Transferência bancária
+  STRIPE         // Stripe
+}
+
+enum PaymentStatus {
+  PENDING    // Pendente
+  COMPLETED  // Concluído
+  FAILED     // Falhou
+  REFUNDED   // Reembolsado
+  CANCELLED  // Cancelado
+}
+
+enum NotificationType {
+  SUCCESS    // Sucesso
+  WARNING    // Aviso
+  ERROR      // Erro
+  INFO       // Informação
+  CAMPAIGN   // Campanha
+  PAYMENT    // Pagamento
+}
+
+enum Priority {
+  LOW        // Baixa
+  MEDIUM     // Média
+  HIGH       // Alta
+  URGENT     // Urgente
+}
+
+enum ServiceCategory {
+  TRAFFIC        // Tráfego pago
+  DEVELOPMENT    // Desenvolvimento web
+  MARKETING      // Marketing digital
+  SEO            // SEO
+  SOCIAL_MEDIA   // Mídias sociais
+}
+
+enum ContactStatus {
+  NEW        // Novo
+  READ       // Lido
+  RESPONDED  // Respondido
+  CLOSED     // Fechado
+}
