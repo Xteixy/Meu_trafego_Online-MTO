@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
-import { supabase } from '@/lib/supabase'
+import { getSupabaseClient } from '@/lib/supabase'
 import { prisma } from '@/lib/prisma'
 import { hash } from 'bcryptjs'
 
@@ -31,6 +31,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Criar usuário no Supabase Auth
+    const supabase = getSupabaseClient()
     const { data: authData, error: authError } = await supabase.auth.signUp({
       email,
       password,
