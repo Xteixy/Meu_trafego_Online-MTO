@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseClient } from '@/lib/supabase'
+import { prisma } from '@/lib/prisma'
+
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
-import { supabase } from '@/lib/supabase'
-import { prisma } from '@/lib/prisma'
 
 export async function POST(request: NextRequest) {
   try {
