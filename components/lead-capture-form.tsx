@@ -52,7 +52,6 @@ export function LeadCaptureForm({
     { value: "development", label: "Desenvolvimento", icon: Zap },
     { value: "ecommerce", label: "E-commerce", icon: Target },
     { value: "automation", label: "Automação", icon: Zap },
-    { value: "hardware", label: "Hardware Premium", icon: Target },
   ]
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -62,7 +61,7 @@ export function LeadCaptureForm({
     try {
       // Simular envio para API
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
+
       toast({
         title: "Sucesso! 🎉",
         description: "Seus dados foram enviados. Em breve entraremos em contato!",

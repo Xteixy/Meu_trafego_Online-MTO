@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Zap, Target, TrendingUp, Cpu, Database, Code, BarChart3, ShoppingCart, Globe, FileText, Newspaper, Building, Eye, Download, Star, CheckCircle } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 import { ScrollAnimation } from "@/components/scroll-animation"
 import { LeadCaptureForm } from "@/components/lead-capture-form"
 import { NewsletterSignup } from "@/components/newsletter-signup"
@@ -36,7 +37,7 @@ export default function HomePage() {
                   <span className="gradient-text animate-glow"> Multiplique</span> Seus Resultados
                 </h1>
                 <p className="text-xl text-muted-foreground text-pretty max-w-2xl animate-slide-up">
-                  Produtos eletrônicos de alta performance + Serviços digitais que convertem. A combinação perfeita para
+                  Soluções web de alta performance + Gestão de tráfego que converte. A combinação perfeita para
                   empresas que querem <strong className="text-primary animate-glow">dominar</strong> seu mercado.
                 </p>
               </div>
@@ -79,19 +80,21 @@ export default function HomePage() {
               {/* Hero Spotlight Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/10 to-primary/20 rounded-full blur-3xl animate-pulse-glow scale-150"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-secondary/30 rounded-full blur-2xl animate-float scale-125"></div>
-              
+
               {/* Doutor Agente Cutout */}
               <div className="relative z-10 flex items-center justify-center">
                 <div className="relative group">
                   {/* Spotlight Ring */}
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-secondary/40 to-primary/40 rounded-full blur-xl scale-110 animate-pulse-glow group-hover:scale-125 transition-all duration-500"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-secondary/30 rounded-full blur-lg scale-105 animate-float group-hover:scale-115 transition-all duration-500"></div>
-                  
+
                   {/* Doutor Agente Image */}
                   <div className="relative z-20">
-                    <img
+                    <Image
                       src="/doctor_agente.png"
                       alt="Doutor Agente - Especialista em Tráfego Digital"
+                      width={384}
+                      height={500}
                       className="w-96 h-auto max-w-full object-contain animate-scale-in animate-float will-change-transform transition-transform duration-500 ease-out hover:scale-110 hover:-rotate-1 mix-blend-lighten dark:mix-blend-screen"
                       style={{
                         WebkitMaskImage:
@@ -104,30 +107,30 @@ export default function HomePage() {
                         animationTimingFunction: "ease-in-out",
                       }}
                     />
-                    
+
                     {/* Floating Elements */}
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: "0.5s" }}></div>
                     <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary/20 rounded-full animate-bounce" style={{ animationDelay: "1s" }}></div>
                     <div className="absolute top-1/2 -right-8 w-4 h-4 bg-primary/30 rounded-full animate-bounce" style={{ animationDelay: "1.5s" }}></div>
                     <div className="absolute top-1/4 -left-8 w-5 h-5 bg-secondary/30 rounded-full animate-bounce" style={{ animationDelay: "2s" }}></div>
                   </div>
-                  
+
                   {/* Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-secondary/10 rounded-full blur-2xl scale-110 animate-pulse-glow"></div>
                 </div>
               </div>
-              
+
               {/* Floating Data Points */}
               <div className="absolute top-10 right-10 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-lg p-3 animate-float">
                 <div className="text-primary font-bold text-sm">+300%</div>
                 <div className="text-xs text-muted-foreground">Tráfego</div>
               </div>
-              
+
               <div className="absolute bottom-20 left-10 bg-secondary/10 backdrop-blur-sm border border-secondary/20 rounded-lg p-3 animate-float" style={{ animationDelay: "1s" }}>
                 <div className="text-secondary font-bold text-sm">ROI 200%</div>
                 <div className="text-xs text-muted-foreground">Retorno</div>
               </div>
-              
+
               <div className="absolute top-1/2 -right-4 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-lg p-3 animate-float" style={{ animationDelay: "2s" }}>
                 <div className="text-primary font-bold text-sm">24/7</div>
                 <div className="text-xs text-muted-foreground">Suporte</div>
@@ -178,8 +181,8 @@ export default function HomePage() {
                   <div className="mt-4 pt-4 border-t border-border">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                        <span className="text-xl font-bold text-primary">AOA 2.997.000</span>
-                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 4.997.000</span>
+                        <span className="text-xl font-bold text-primary">AOA 100.000</span>
+                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 150.000</span>
                       </div>
                       <Badge className="bg-green-500/20 text-green-500 border-green-500/30 text-xs">
                         -40%
@@ -212,8 +215,8 @@ export default function HomePage() {
                   <div className="mt-4 pt-4 border-t border-border">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                        <span className="text-xl font-bold text-secondary">AOA 8.997.000</span>
-                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 12.997.000</span>
+                        <span className="text-xl font-bold text-secondary">AOA 200.000</span>
+                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 280.000</span>
                       </div>
                       <Badge className="bg-green-500/20 text-green-500 border-green-500/30 text-xs">
                         -31%
@@ -246,8 +249,8 @@ export default function HomePage() {
                   <div className="mt-4 pt-4 border-t border-border">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                        <span className="text-xl font-bold text-primary">AOA 15.997.000</span>
-                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 22.997.000</span>
+                        <span className="text-xl font-bold text-primary">AOA 300.000</span>
+                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 450.000</span>
                       </div>
                       <Badge className="bg-green-500/20 text-green-500 border-green-500/30 text-xs">
                         -30%
@@ -417,7 +420,7 @@ export default function HomePage() {
               Escolha o <span className="gradient-text animate-glow">Template Perfeito</span> para Seu Negócio
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty animate-fade-in">
-              Templates modernos e responsivos para diferentes tipos de negócios. 
+              Templates modernos e responsivos para diferentes tipos de negócios.
               Design profissional, código limpo e otimização SEO incluídos.
             </p>
           </ScrollAnimation>
@@ -457,8 +460,8 @@ export default function HomePage() {
                   <div className="pt-4 border-t border-border">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                      <span className="text-xl font-bold text-primary">AOA 299.000</span>
-                      <span className="text-sm text-muted-foreground line-through ml-2">AOA 399.000</span>
+                        <span className="text-xl font-bold text-primary">AOA 100.000</span>
+                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 150.000</span>
                       </div>
                       <div className="flex items-center">
                         <Star className="h-4 w-4 text-secondary fill-current" />
@@ -513,8 +516,8 @@ export default function HomePage() {
                   <div className="pt-4 border-t border-border">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                      <span className="text-xl font-bold text-secondary">AOA 599.000</span>
-                      <span className="text-sm text-muted-foreground line-through ml-2">AOA 799.000</span>
+                        <span className="text-xl font-bold text-secondary">AOA 150.000</span>
+                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 250.000</span>
                       </div>
                       <div className="flex items-center">
                         <Star className="h-4 w-4 text-secondary fill-current" />
@@ -569,8 +572,8 @@ export default function HomePage() {
                   <div className="pt-4 border-t border-border">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                      <span className="text-xl font-bold text-primary">AOA 199.000</span>
-                      <span className="text-sm text-muted-foreground line-through ml-2">AOA 299.000</span>
+                        <span className="text-xl font-bold text-primary">AOA 40.000</span>
+                        <span className="text-sm text-muted-foreground line-through ml-2">AOA 60.000</span>
                       </div>
                       <div className="flex items-center">
                         <Star className="h-4 w-4 text-secondary fill-current" />
@@ -600,7 +603,7 @@ export default function HomePage() {
                   Mais de <span className="text-primary">80 Templates</span> Disponíveis
                 </h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Explore nossa biblioteca completa de templates para sites, blogs, e-commerces, 
+                  Explore nossa biblioteca completa de templates para sites, blogs, e-commerces,
                   portais de notícias e muito mais. Todos com design moderno e código otimizado.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -640,10 +643,10 @@ export default function HomePage() {
                 Pronto para <span className="gradient-text animate-glow">Dominar</span> Seu Mercado?
               </h2>
               <p className="text-xl text-muted-foreground text-pretty animate-fade-in">
-                Junte-se a mais de 500 empresas que já transformaram seus resultados com MTO. 
+                Junte-se a mais de 500 empresas que já transformaram seus resultados com MTO.
                 Receba uma consultoria gratuita e descubra como multiplicar suas vendas.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary mb-2">🚀</div>
@@ -676,7 +679,7 @@ export default function HomePage() {
       <section className="py-24 bg-card/30 relative overflow-hidden">
         <div className="absolute top-1/4 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-        
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <NewsletterSignup
             title="Receba Estratégias Exclusivas"

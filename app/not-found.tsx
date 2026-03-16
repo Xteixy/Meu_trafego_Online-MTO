@@ -38,7 +38,7 @@ export default function NotFound() {
               variant="outline"
               className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
             >
-              <Link href="/servicos">
+              <Link href="/portfolio">
                 <Search className="mr-2 h-5 w-5" />
                 Ver Serviços
               </Link>
@@ -52,7 +52,7 @@ export default function NotFound() {
               <Link href="/produtos" className="text-muted-foreground hover:text-primary transition-colors">
                 Produtos
               </Link>
-              <Link href="/servicos" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">
                 Serviços
               </Link>
               <Link href="/sobre" className="text-muted-foreground hover:text-primary transition-colors">

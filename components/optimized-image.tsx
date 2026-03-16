@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils"
 interface OptimizedImageProps {
   src: string
   alt: string
-  width: number
-  height: number
+  width?: number
+  height?: number
   className?: string
   priority?: boolean
   quality?: number
@@ -151,14 +151,14 @@ export function OptimizedBackgroundImage({
         className="object-cover"
         priority
       />
-      
+
       {overlay && (
         <div
           className="absolute inset-0 bg-black"
           style={{ opacity: overlayOpacity }}
         />
       )}
-      
+
       {children && (
         <div className="relative z-10">
           {children}

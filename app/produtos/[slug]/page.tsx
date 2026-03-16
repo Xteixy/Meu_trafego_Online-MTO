@@ -4,13 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Separator } from "@/components/ui/separator"
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Truck, 
-  Shield, 
-  Clock, 
+import {
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Truck,
+  Shield,
+  Clock,
   Zap,
   Database,
   HardDrive,
@@ -34,146 +34,132 @@ import { OptimizedImage } from "@/components/optimized-image"
 import { ConversionTracker } from "@/components/analytics-tracker"
 
 // Dados dos produtos (em produção, viria de uma API)
+// Dados dos produtos e serviços
 const products = {
-  "ssd-nvme-2tb": {
-    id: "ssd-nvme-2tb",
-    name: "SSD NVMe 2TB Enterprise",
-    shortName: "SSD NVMe 2TB",
-    category: "Armazenamento",
-    price: 1299.99,
-    originalPrice: 1899.99,
-    discount: 32,
-    rating: 4.9,
-    reviews: 2847,
+  "sites-corporativos": {
+    id: "sites-corporativos",
+    name: "Sites Corporativos Premium",
+    shortName: "Site Corporativo",
+    category: "Desenvolvimento",
+    price: 100000.0,
+    originalPrice: 150000.0,
+    discount: 29,
+    rating: 5.0,
+    reviews: 124,
     inStock: true,
-    stockCount: 15,
+    stockCount: 10,
     images: [
       "/business-automation-workflow-processes.png",
-      "/digital-marketing-dashboard.png",
-      "/ecommerce-conversion-optimization-shopping-cart.png"
+      "/digital-marketing-dashboard.png"
     ],
     mainImage: "/business-automation-workflow-processes.png",
-    description: "SSD NVMe de última geração com velocidade extrema para aplicações críticas e servidores enterprise.",
-    longDescription: "O SSD NVMe 2TB Enterprise é a solução definitiva para empresas que exigem máxima performance e confiabilidade. Com velocidades de leitura de até 7.000 MB/s e escrita de 6.500 MB/s, este SSD revoluciona a experiência de armazenamento.",
+    description: "Presença digital robusta e profissional para grandes empresas e marcas.",
+    longDescription: "O Site Corporativo da MTO é desenvolvido com as tecnologias mais modernas do mercado (Next.js 15), garantindo velocidade, segurança e um design que transmite autoridade. Focado em empresas que buscam consolidar sua marca no ambiente digital.",
     features: [
-      "Velocidade de leitura: 7.000 MB/s",
-      "Velocidade de escrita: 6.500 MB/s",
-      "Interface: PCIe 4.0 x4",
-      "Capacidade: 2TB",
-      "Garantia: 5 anos",
-      "Resistência: 1.200 TBW",
-      "Temperatura operacional: 0°C a 70°C",
-      "Consumo: 3.3V, 2.8A"
+      "Design exclusivo e responsivo",
+      "Otimização para mecanismos de busca (SEO)",
+      "Blog integrado para marketing de conteúdo",
+      "Segurança avançada (SSL + WAF)",
+      "Integração com analytics e CRM",
+      "Painel administrativo intuitivo"
     ],
     specifications: {
-      "Capacidade": "2TB",
-      "Interface": "PCIe 4.0 x4",
-      "Velocidade Leitura": "7.000 MB/s",
-      "Velocidade Escrita": "6.500 MB/s",
-      "Garantia": "5 anos",
-      "Resistência": "1.200 TBW",
-      "Formato": "M.2 2280",
-      "Protocolo": "NVMe 1.4"
+      "Tecnologia": "Next.js + Tailwind CSS",
+      "Hospedagem": "Vercel / AWS",
+      "SEO": "Avançado",
+      "Suporte": "24/7 Dedicado",
+      "Entrega": "15-20 dias úteis",
+      "Certificado SSL": "Incluso"
     },
     benefits: [
-      "Acelera aplicações em até 10x",
-      "Reduz tempo de carregamento",
-      "Aumenta produtividade da equipe",
-      "Ideal para servidores e workstations",
-      "Compatível com todas as placas modernas"
+      "Maior autoridade de marca",
+      "Geração de leads qualificados",
+      "Navegação ultra-rápida",
+      "Fácil atualização de conteúdo"
     ],
     useCases: [
-      "Servidores enterprise",
-      "Workstations profissionais",
-      "Edição de vídeo 4K/8K",
-      "Renderização 3D",
-      "Análise de big data",
-      "Virtualização"
+      "Empresas de médio e grande porte",
+      "Consultorias e serviços B2B",
+      "Indústrias e manufatura",
+      "Escritórios de advocacia / contabilidade"
     ],
     warranty: {
-      period: "5 anos",
-      coverage: "Cobertura completa incluindo falhas de fabricação",
-      support: "Suporte técnico especializado 24/7"
+      period: "1 ano",
+      coverage: "Manutenção técnica e correções inclusas",
+      support: "Suporte prioritário"
     },
     shipping: {
       free: true,
-      time: "1-2 dias úteis",
-      regions: ["Brasil todo", "Mercosul"]
+      time: "Imediato após setup",
+      regions: ["Global"]
     },
     relatedProducts: [
-      "ssd-nvme-1tb",
-      "ssd-nvme-4tb",
-      "ssd-sata-2tb"
+      "sites-institucionais",
+      "e-commerce",
+      "hospedagem"
     ]
   },
-  "led-profissional": {
-    id: "led-profissional",
-    name: "LED Profissional RGB",
-    shortName: "LED RGB Pro",
-    category: "Iluminação",
-    price: 299.99,
-    originalPrice: 449.99,
-    discount: 33,
-    rating: 4.8,
-    reviews: 1856,
+  "e-commerce": {
+    id: "e-commerce",
+    name: "E-commerce de Alta Performance",
+    shortName: "Loja Virtual",
+    category: "Vendas Online",
+    price: 150000.0,
+    originalPrice: 200000.0,
+    discount: 16,
+    rating: 4.9,
+    reviews: 89,
     inStock: true,
-    stockCount: 42,
+    stockCount: 5,
     images: [
-      "/digital-marketing-dashboard.png",
-      "/business-automation-workflow-processes.png",
-      "/ecommerce-conversion-optimization-shopping-cart.png"
+      "/ecommerce-conversion-optimization-shopping-cart.png",
+      "/digital-marketing-dashboard.png"
     ],
-    mainImage: "/digital-marketing-dashboard.png",
-    description: "Sistema de iluminação LED profissional com controle via app e automação inteligente.",
-    longDescription: "Transforme qualquer ambiente com nossa solução de iluminação LED profissional. Controle total via smartphone, automação inteligente e economia de energia de até 80%.",
+    mainImage: "/ecommerce-conversion-optimization-shopping-cart.png",
+    description: "Loja virtual completa com foco em conversão e experiência do usuário.",
+    longDescription: "Nossa solução de E-commerce é projetada para vender. Com um checkout simplificado, integração com múltiplos meios de pagamento e gestão de estoque em tempo real, sua empresa terá tudo o que precisa para escalar as vendas online.",
     features: [
-      "16 milhões de cores",
-      "Controle via app iOS/Android",
-      "Automação por horário",
-      "Economia de energia: 80%",
-      "Vida útil: 50.000 horas",
-      "Potência: 24W",
-      "Luminosidade: 2.400 lumens",
-      "Compatível: Alexa, Google Home"
+      "Sistema de carrinho e checkout seguro",
+      "Gestão completa de catálogo e estoque",
+      "Integração com gateways de pagamento",
+      "Calculadora de frete automática",
+      "Relatórios de vendas detalhados",
+      "Cupom de desconto e promoções"
     ],
     specifications: {
-      "Potência": "24W",
-      "Luminosidade": "2.400 lumens",
-      "Cores": "16 milhões",
-      "Vida útil": "50.000 horas",
-      "Economia": "80%",
-      "Controle": "WiFi + Bluetooth",
-      "Compatibilidade": "Alexa, Google Home",
-      "Garantia": "3 anos"
+      "Frontend": "Next.js / React",
+      "Backend": "PostgreSQL / Prisma",
+      "Pagamentos": "Stripe / Multicaixa Express",
+      "Estoque": "Tempo real",
+      "Certificação": "PCI Compliance",
+      "Segurança": "Firewall Enterprise"
     },
     benefits: [
-      "Reduz conta de energia",
-      "Ambiente personalizado",
-      "Controle remoto total",
-      "Integração com smart home",
-      "Instalação simples"
+      "Vendas 24/7 automatizadas",
+      "Experiência mobile impecável",
+      "Escalabilidade para milhares de acessos",
+      "Baixo custo de manutenção"
     ],
     useCases: [
-      "Escritórios corporativos",
-      "Lojas e comércios",
-      "Hotéis e restaurantes",
-      "Residências inteligentes",
-      "Eventos e shows"
+      "Lojas de varejo",
+      "Marcas de moda e acessórios",
+      "Venda de produtos digitais",
+      "Supermercados e delivery"
     ],
     warranty: {
-      period: "3 anos",
-      coverage: "Cobertura completa para falhas",
-      support: "Suporte técnico 8h-18h"
+      period: "1 ano",
+      coverage: "Manutenção de segurança e atualizações",
+      support: "Suporte 24h para vendas"
     },
     shipping: {
       free: true,
-      time: "2-3 dias úteis",
-      regions: ["Brasil todo"]
+      time: "Setup em 25 dias úteis",
+      regions: ["Global"]
     },
     relatedProducts: [
-      "led-strip-rgb",
-      "led-downlight",
-      "led-panel"
+      "landing-pages",
+      "hospedagem",
+      "dominio"
     ]
   }
 }
@@ -194,9 +180,9 @@ export default function ProductPage({ params }: ProductPageProps) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      
+
       {/* Breadcrumb */}
-                   <div className="pt-24 pb-6 bg-card/30">
+      <div className="pt-24 pb-6 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-2 text-sm text-muted-foreground">
             <a href="/" className="hover:text-primary transition-colors">Início</a>
@@ -223,7 +209,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   priority
                 />
               </div>
-              
+
               <div className="grid grid-cols-4 gap-4">
                 {product.images.slice(0, 4).map((image, index) => (
                   <div key={index} className="aspect-square rounded-lg overflow-hidden bg-card border border-border cursor-pointer hover:border-primary transition-colors">
@@ -244,11 +230,11 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <Badge className="bg-primary/20 text-primary border-primary/30">
                   {product.category}
                 </Badge>
-                
+
                 <h1 className="text-3xl lg:text-4xl font-bold text-balance">
                   {product.name}
                 </h1>
-                
+
                 <p className="text-lg text-muted-foreground">
                   {product.description}
                 </p>
@@ -259,11 +245,10 @@ export default function ProductPage({ params }: ProductPageProps) {
                     {[...Array(5)].map((_, i) => (
                       <StarIcon
                         key={i}
-                        className={`h-5 w-5 ${
-                          i < Math.floor(product.rating)
-                            ? "text-yellow-400 fill-current"
-                            : "text-muted-foreground"
-                        }`}
+                        className={`h-5 w-5 ${i < Math.floor(product.rating)
+                          ? "text-yellow-400 fill-current"
+                          : "text-muted-foreground"
+                          }`}
                       />
                     ))}
                   </div>
@@ -276,12 +261,12 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <div className="space-y-2">
                   <div className="flex items-center space-x-4">
                     <span className="text-3xl font-bold text-primary">
-                      R$ {product.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                      AOA {product.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
                     </span>
                     {product.originalPrice > product.price && (
                       <>
                         <span className="text-xl text-muted-foreground line-through">
-                          R$ {product.originalPrice.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                          AOA {product.originalPrice.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
                         </span>
                         <Badge className="bg-green-500/20 text-green-500 border-green-500/30">
                           -{product.discount}%
@@ -289,7 +274,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                       </>
                     )}
                   </div>
-                  
+
                   {product.inStock ? (
                     <div className="flex items-center space-x-2 text-green-500">
                       <CheckCircle className="h-4 w-4" />
@@ -321,7 +306,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                       Adicionar ao Carrinho
                     </Button>
                   </ConversionTracker>
-                  
+
                   <Button
                     size="lg"
                     variant="outline"
@@ -374,7 +359,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {product.longDescription}
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-8 mt-8">
                   <div>
                     <h3 className="text-xl font-semibold mb-4">Características Principais</h3>
@@ -387,7 +372,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-xl font-semibold mb-4">Garantia e Suporte</h3>
                     <div className="space-y-3">
@@ -422,7 +407,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     ))}
                   </div>
                 </div>
-                
+
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Downloads</h2>
                   <div className="space-y-4">
@@ -531,7 +516,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 // Gerar metadados dinâmicos
 export async function generateMetadata({ params }: ProductPageProps) {
   const product = products[params.slug as keyof typeof products]
-  
+
   if (!product) {
     return {
       title: "Produto não encontrado",
@@ -544,9 +529,9 @@ export async function generateMetadata({ params }: ProductPageProps) {
     keywords: [
       product.category.toLowerCase(),
       product.name.toLowerCase(),
-      "produtos eletrônicos",
-      "hardware premium",
-      "tecnologia enterprise"
+      "desenvolvimento web",
+      "sites angola",
+      "e-commerce profissional"
     ],
     openGraph: {
       title: product.name,

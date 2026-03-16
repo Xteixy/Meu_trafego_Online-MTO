@@ -1,8 +1,3 @@
-
-
-
-
-
 "use client"
 
 import { useState } from "react"
@@ -21,8 +16,8 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: "Início" },
-    { href: "/produtos", label: "Produtos" },
-    { href: "/servicos", label: "Serviços" },
+    { href: "/produtos", label: "Produtos & Serviços" },
+    { href: "/portfolio", label: "Portfólio" },
     { href: "/ebooks", label: "E-books" },
     { href: "/blog", label: "Blog" },
     { href: "/sobre", label: "Sobre" },
@@ -50,32 +45,14 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition-colors ${
-                  isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground hover:text-primary"
-                }`}
+                className={`transition-colors ${isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground hover:text-primary"
+                  }`}
               >
                 {item.label}
               </Link>
             ))}
             <ThemeSelector />
-            
-            {/* WhatsApp Button */}
-            <Button 
-              className="bg-green-600 hover:bg-green-700 text-white border-green-600 hover:border-green-700" 
-              size="sm"
-              asChild
-            >
-              <a 
-                href="https://wa.me/937500709" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2"
-              >
-                <MessageCircle className="h-4 w-4" />
-                <span>WhatsApp</span>
-              </a>
-            </Button>
-            
+
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
               <a href="/auth">Entrar <ArrowRight className="ml-2 h-4 w-4" /></a>
             </Button>
@@ -105,30 +82,14 @@ export function Navigation() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className={`text-lg transition-colors ${
-                          isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground hover:text-primary"
-                        }`}
+                        className={`text-lg transition-colors ${isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground hover:text-primary"
+                          }`}
                       >
                         {item.label}
                       </Link>
                     ))}
-                    {/* WhatsApp Button Mobile */}
-                    <Button 
-                      className="bg-green-600 hover:bg-green-700 text-white border-green-600 hover:border-green-700 w-full" 
-                      asChild
-                    >
-                      <a 
-                        href="https://wa.me/937500709" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center space-x-2"
-                      >
-                        <MessageCircle className="h-4 w-4" />
-                        <span>Falar no WhatsApp</span>
-                      </a>
-                    </Button>
-                    
-                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground mt-2" asChild>
+
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground mt-4" asChild>
                       <a href="/auth">Entrar <ArrowRight className="ml-2 h-4 w-4" /></a>
                     </Button>
                   </div>

@@ -24,6 +24,13 @@ import {
   Eye,
   Download,
   ExternalLink,
+  TrendingUp,
+  Code,
+  BarChart3,
+  Settings,
+  Clock,
+  Users,
+  BookOpen,
 } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -38,14 +45,14 @@ export default function ProdutosPage() {
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6">
-            <Badge className="bg-primary/20 text-primary border-primary/30 text-lg px-4 py-2">Hardware Premium</Badge>
+            <Badge className="bg-primary/20 text-primary border-primary/30 text-lg px-4 py-2">Soluções Digitais</Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-balance">
-              Produtos <span className="text-primary">Eletrônicos</span> de
-              <span className="text-secondary"> Alta Performance</span>
+              Produtos & <span className="text-primary">Serviços</span> para
+              <span className="text-secondary"> Transformação Digital</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Equipamentos selecionados para empresas que exigem o máximo em qualidade, performance e confiabilidade.
-              Garantia estendida e suporte técnico especializado.
+              Desenvolvimento completo de sites, e-commerce e infraestrutura web para escalar seu negócio no ambiente digital.
+              Tecnologia de ponta com foco em resultados reais.
             </p>
           </div>
         </div>
@@ -54,185 +61,180 @@ export default function ProdutosPage() {
       {/* Product Categories */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Tabs defaultValue="hds" className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-12 bg-card">
+          <Tabs defaultValue="desenvolvimento" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-12 bg-card">
               <TabsTrigger
-                value="hds"
+                value="desenvolvimento"
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                <Globe className="mr-2 h-4 w-4" />
+                Criação de Sites
+              </TabsTrigger>
+              <TabsTrigger
+                value="ecommerce"
+                className="data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
+                <ShoppingCart className="mr-2 h-4 w-4" />
+                Vendas & Conversão
+              </TabsTrigger>
+              <TabsTrigger
+                value="infra"
                 className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
                 <Database className="mr-2 h-4 w-4" />
-                HDs & Armazenamento
-              </TabsTrigger>
-              <TabsTrigger
-                value="leds"
-                className="data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
-              >
-                <Zap className="mr-2 h-4 w-4" />
-                LEDs & Iluminação
-              </TabsTrigger>
-              <TabsTrigger
-                value="componentes"
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-              >
-                <Cpu className="mr-2 h-4 w-4" />
-                Componentes
-              </TabsTrigger>
-              <TabsTrigger
-                value="templates"
-                className="data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
-              >
-                <Globe className="mr-2 h-4 w-4" />
-                Templates Web
+                Infraestrutura Web
               </TabsTrigger>
             </TabsList>
 
-            {/* HDs & Storage Tab */}
-            <TabsContent value="hds" className="space-y-8">
+            {/* Web Development Tab */}
+            <TabsContent value="desenvolvimento" className="space-y-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                        <HardDrive className="h-6 w-6 text-primary" />
+                        <Building className="h-6 w-6 text-primary" />
                       </div>
-                      <Badge className="bg-primary/20 text-primary">Mais Vendido</Badge>
+                      <Badge className="bg-primary/20 text-primary">Profissional</Badge>
                     </div>
-                    <CardTitle className="text-xl">SSD NVMe 2TB Enterprise</CardTitle>
-                    <CardDescription>Velocidade extrema para aplicações críticas</CardDescription>
+                    <CardTitle className="text-xl">Sites Corporativos</CardTitle>
+                    <CardDescription>Presença digital robusta para grandes empresas</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Leitura: 7.000 MB/s
+                        Design exclusivo e premium
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Escrita: 6.500 MB/s
+                        Integração com analytics avançado
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Garantia: 5 anos
+                        Multi-páginas e blog integrado
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        MTBF: 2.5M horas
+                        SEO de alta performance
                       </div>
                     </div>
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <span className="text-2xl font-bold text-primary">AOA 1.299.000</span>
-                          <span className="text-sm text-muted-foreground line-through ml-2">AOA 1.599.000</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Star className="h-4 w-4 text-secondary fill-current" />
-                          <span className="text-sm ml-1">4.9</span>
-                        </div>
-                      </div>
-                      <Button 
-                        className="w-full bg-primary hover:bg-primary/90"
-                        asChild
-                      >
-                        <a href="/produtos/ssd-nvme-2tb">Ver Detalhes</a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                        <Database className="h-6 w-6 text-primary" />
-                      </div>
-                      <Badge variant="outline">Enterprise</Badge>
-                    </div>
-                    <CardTitle className="text-xl">HD SATA 4TB Servidor</CardTitle>
-                    <CardDescription>Confiabilidade 24/7 para servidores</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        RPM: 7.200
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Cache: 256MB
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Garantia: 3 anos
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Uso: 24/7
-                      </div>
-                    </div>
-                    <div className="pt-4 border-t border-border">
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <span className="text-2xl font-bold text-primary">AOA 899.000</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Star className="h-4 w-4 text-secondary fill-current" />
-                          <span className="text-sm ml-1">4.8</span>
-                        </div>
-                      </div>
-                      <Button 
-                        className="w-full bg-transparent" 
-                        variant="outline"
-                        asChild
-                      >
-                        <a href="/produtos/ssd-nvme-2tb">Ver Detalhes</a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-                        <Database className="h-6 w-6 text-secondary" />
-                      </div>
-                      <Badge className="bg-secondary/20 text-secondary">Novo</Badge>
-                    </div>
-                    <CardTitle className="text-xl">SSD Externo 1TB USB-C</CardTitle>
-                    <CardDescription>Portabilidade e velocidade em suas mãos</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Velocidade: 1.050 MB/s
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        USB-C 3.2 Gen 2
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Resistente a quedas
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Criptografia AES
-                      </div>
-                    </div>
-                    <div className="pt-4 border-t border-border">
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <span className="text-2xl font-bold text-secondary">AOA 699.000</span>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-primary">AOA 100.000</span>
                         </div>
                         <div className="flex items-center">
                           <Star className="h-4 w-4 text-secondary fill-current" />
                           <span className="text-sm ml-1">5.0</span>
                         </div>
                       </div>
-                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                        Comprar Agora
+                      <Button
+                        className="w-full bg-primary hover:bg-primary/90"
+                        asChild
+                      >
+                        <a href="/contato">Solicitar Orçamento</a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <Globe className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge variant="outline">Impacto</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Sites Institucionais</CardTitle>
+                    <CardDescription>Apresentação clara e objetiva do seu negócio</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Foco em credibilidade e marca
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Navegação rápida e intuitiva
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Compatível com dispositivos móveis
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Configuração de domínio inclusa
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-primary">AOA 60.000</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Star className="h-4 w-4 text-secondary fill-current" />
+                          <span className="text-sm ml-1">4.9</span>
+                        </div>
+                      </div>
+                      <Button
+                        className="w-full bg-transparent"
+                        variant="outline"
+                        asChild
+                      >
+                        <a href="/contato">Ver Planos</a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                        <Zap className="h-6 w-6 text-secondary" />
+                      </div>
+                      <Badge className="bg-secondary/20 text-secondary">Novo</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Desenvolvimento Sob Medida</CardTitle>
+                    <CardDescription>Sistemas personalizados para suas necessidades</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
+                        Full Stack (Next.js + Postgres)
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
+                        Painéis administrativos customizados
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
+                        Integração com APIs externas
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-secondary mr-2" />
+                        Escalabilidade garantida
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <p className="text-sm text-muted-foreground">Orçamento sob consulta</p>
+                          <span className="text-2xl font-bold text-secondary">AOA Flex</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Star className="h-4 w-4 text-secondary fill-current" />
+                          <span className="text-sm ml-1">5.0</span>
+                        </div>
+                      </div>
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild>
+                        <a href="/contato">Falar com Consultor</a>
                       </Button>
                     </div>
                   </CardContent>
@@ -240,51 +242,52 @@ export default function ProdutosPage() {
               </div>
             </TabsContent>
 
-            {/* LEDs Tab */}
-            <TabsContent value="leds" className="space-y-8">
+            {/* E-commerce & Landing Pages Tab */}
+            <TabsContent value="ecommerce" className="space-y-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-                        <Zap className="h-6 w-6 text-secondary" />
+                        <ShoppingCart className="h-6 w-6 text-secondary" />
                       </div>
-                      <Badge className="bg-secondary/20 text-secondary">Smart</Badge>
+                      <Badge className="bg-secondary/20 text-secondary">Vendas</Badge>
                     </div>
-                    <CardTitle className="text-xl">Painel LED 60x60 Smart</CardTitle>
-                    <CardDescription>Iluminação inteligente para escritórios</CardDescription>
+                    <CardTitle className="text-xl">E-commerce Completo</CardTitle>
+                    <CardDescription>Sua loja virtual pronta para vender</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Potência: 40W
+                        Carrinho e Checkout otimizados
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Controle via App
+                        Gestão de estoque e pedidos
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Dimmerizável
+                        Integração com meios de pagamento
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Vida útil: 50.000h
+                        Segurança com certificado SSL
                       </div>
                     </div>
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <span className="text-2xl font-bold text-secondary">AOA 299.000</span>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-secondary">AOA 150.000</span>
                         </div>
                         <div className="flex items-center">
                           <Star className="h-4 w-4 text-secondary fill-current" />
-                          <span className="text-sm ml-1">4.7</span>
+                          <span className="text-sm ml-1">4.9</span>
                         </div>
                       </div>
-                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                        Comprar Kit
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild>
+                        <a href="/contato">Criar Minha Loja</a>
                       </Button>
                     </div>
                   </CardContent>
@@ -294,44 +297,45 @@ export default function ProdutosPage() {
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-                        <Monitor className="h-6 w-6 text-secondary" />
+                        <Target className="h-6 w-6 text-secondary" />
                       </div>
-                      <Badge variant="outline">Profissional</Badge>
+                      <Badge variant="outline">Alta Conversão</Badge>
                     </div>
-                    <CardTitle className="text-xl">Refletor LED 200W</CardTitle>
-                    <CardDescription>Iluminação externa de alta potência</CardDescription>
+                    <CardTitle className="text-xl">Landing Pages</CardTitle>
+                    <CardDescription>Focadas em converter leads em clientes</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Luminosidade: 22.000 lm
+                        Copywriting focado em vendas
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        IP66 - À prova d'água
+                        Design clean e objetivo
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Sensor de movimento
+                        Integração com Meta Pixel e Tags
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Garantia: 2 anos
+                        Carregamento ultra-rápido (Lighthouse 95+)
                       </div>
                     </div>
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <span className="text-2xl font-bold text-secondary">AOA 449.000</span>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-secondary">AOA 40.000</span>
                         </div>
                         <div className="flex items-center">
                           <Star className="h-4 w-4 text-secondary fill-current" />
-                          <span className="text-sm ml-1">4.9</span>
+                          <span className="text-sm ml-1">5.0</span>
                         </div>
                       </div>
-                      <Button className="w-full bg-transparent" variant="outline">
-                        Ver Detalhes
+                      <Button className="w-full bg-transparent" variant="outline" asChild>
+                        <a href="/contato">Aumentar Conversão</a>
                       </Button>
                     </div>
                   </CardContent>
@@ -343,91 +347,97 @@ export default function ProdutosPage() {
                       <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                         <Smartphone className="h-6 w-6 text-primary" />
                       </div>
-                      <Badge className="bg-primary/20 text-primary">RGB</Badge>
+                      <Badge className="bg-primary/20 text-primary">Mobile</Badge>
                     </div>
-                    <CardTitle className="text-xl">Fita LED RGB 5m Smart</CardTitle>
-                    <CardDescription>Ambientação colorida controlável</CardDescription>
+                    <CardTitle className="text-xl">Apps de Vendas Web</CardTitle>
+                    <CardDescription>Experiência de app dentro do navegador</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        16 milhões de cores
+                        PWA (Progressive Web App)
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Controle por voz
+                        Notificações push ocasionais
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Sincronização musical
+                        Interface fluida e interativa
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Adesivo 3M incluso
+                        Instalável no celular
                       </div>
                     </div>
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <span className="text-2xl font-bold text-primary">AOA 199.000</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Star className="h-4 w-4 text-secondary fill-current" />
-                          <span className="text-sm ml-1">4.6</span>
-                        </div>
-                      </div>
-                      <Button className="w-full bg-primary hover:bg-primary/90">Adicionar ao Carrinho</Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-
-            {/* Components Tab */}
-            <TabsContent value="componentes" className="space-y-8">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                        <Cpu className="h-6 w-6 text-primary" />
-                      </div>
-                      <Badge className="bg-primary/20 text-primary">Gaming</Badge>
-                    </div>
-                    <CardTitle className="text-xl">Processador Intel i9-13900K</CardTitle>
-                    <CardDescription>Performance extrema para workstations</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        24 cores / 32 threads
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Base: 3.0GHz / Boost: 5.8GHz
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Cache: 36MB
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Socket LGA1700
-                      </div>
-                    </div>
-                    <div className="pt-4 border-t border-border">
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <span className="text-2xl font-bold text-primary">AOA 2.899.000</span>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-primary">AOA 200.000</span>
                         </div>
                         <div className="flex items-center">
                           <Star className="h-4 w-4 text-secondary fill-current" />
                           <span className="text-sm ml-1">4.8</span>
                         </div>
                       </div>
-                      <Button className="w-full bg-primary hover:bg-primary/90">Comprar Agora</Button>
+                      <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                        <a href="/contato">Consultar Projeto</a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+
+            {/* Infrastructure Tab */}
+            <TabsContent value="infra" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <Database className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge className="bg-primary/20 text-primary">Velocidade</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Serviços de Hospedagem</CardTitle>
+                    <CardDescription>Hospedagem de alta performance para seu site</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Uptime de 99.9% garantido
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Backups diários automáticos
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Certificado SSL gratuito incluso
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Suporte técnico 24/7 especializado
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-primary">AOA 5.000/mês</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Star className="h-4 w-4 text-secondary fill-current" />
+                          <span className="text-sm ml-1">5.0</span>
+                        </div>
+                      </div>
+                      <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                        <a href="/contato">Contratar Agora</a>
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -436,44 +446,45 @@ export default function ProdutosPage() {
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-                        <Monitor className="h-6 w-6 text-secondary" />
+                        <Globe className="h-6 w-6 text-secondary" />
                       </div>
-                      <Badge className="bg-secondary/20 text-secondary">RTX</Badge>
+                      <Badge className="bg-secondary/20 text-secondary">Identidade</Badge>
                     </div>
-                    <CardTitle className="text-xl">Placa de Vídeo RTX 4080</CardTitle>
-                    <CardDescription>Gráficos profissionais e gaming</CardDescription>
+                    <CardTitle className="text-xl">Contratação de Domínio</CardTitle>
+                    <CardDescription>Sua marca registrada na Internet</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        16GB GDDR6X
+                        Domínios .AO, .COM, .NET, .PT e mais
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        DLSS 3.0
+                        Gestão de DNS simplificada
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        Ray Tracing
+                        Proteção de privacidade WHOIS
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                        4K Gaming
+                        E-mails personalizados inclusos
                       </div>
                     </div>
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <span className="text-2xl font-bold text-secondary">AOA 6.999.000</span>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-secondary">AOA 15.000/ano</span>
                         </div>
                         <div className="flex items-center">
                           <Star className="h-4 w-4 text-secondary fill-current" />
                           <span className="text-sm ml-1">4.9</span>
                         </div>
                       </div>
-                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                        Solicitar Orçamento
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild>
+                        <a href="/contato">Buscar Domínio</a>
                       </Button>
                     </div>
                   </CardContent>
@@ -483,43 +494,46 @@ export default function ProdutosPage() {
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                        <Database className="h-6 w-6 text-primary" />
+                        <Shield className="h-6 w-6 text-primary" />
                       </div>
-                      <Badge variant="outline">DDR5</Badge>
+                      <Badge variant="outline">Segurança</Badge>
                     </div>
-                    <CardTitle className="text-xl">Memória RAM 32GB DDR5</CardTitle>
-                    <CardDescription>Velocidade extrema para multitasking</CardDescription>
+                    <CardTitle className="text-xl">Segurança Web Avançada</CardTitle>
+                    <CardDescription>Proteção total contra ameaças digitais</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        5600MHz
+                        WAF (Web Application Firewall)
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Kit 2x16GB
+                        Proteção contra ataques DDoS
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        RGB Sync
+                        Varredura de malware recorrente
                       </div>
                       <div className="flex items-center text-sm">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Garantia vitalícia
+                        Otimização de performance CDN
                       </div>
                     </div>
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <span className="text-2xl font-bold text-primary">AOA 1.599.000</span>
+                          <p className="text-sm text-muted-foreground">A partir de</p>
+                          <span className="text-2xl font-bold text-primary">AOA 10.000/mês</span>
                         </div>
                         <div className="flex items-center">
                           <Star className="h-4 w-4 text-secondary fill-current" />
                           <span className="text-sm ml-1">4.7</span>
                         </div>
                       </div>
-                      <Button className="w-full bg-primary hover:bg-primary/90">Comprar Kit</Button>
+                      <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                        <a href="/contato">Proteger Meu Site</a>
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -1095,6 +1109,460 @@ export default function ProdutosPage() {
         </div>
       </section>
 
+      {/* ============ SERVIÇOS DIGITAIS ============ */}
+      {/* Service Categories */}
+      <section className="py-16 bg-card/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Nossos <span className="text-primary">Serviços</span> Digitais</h2>
+            <p className="text-muted-foreground">Do tráfego qualificado ao desenvolvimento completo. Tudo que sua empresa precisa para dominar o digital.</p>
+          </div>
+          <Tabs defaultValue="marketing" className="w-full">
+            <TabsList className="grid w-full grid-cols-4 mb-12 bg-card">
+              <TabsTrigger value="marketing" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                <TrendingUp className="mr-2 h-4 w-4" />
+                Marketing
+              </TabsTrigger>
+              <TabsTrigger value="desenvolvimento" className="data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+                <Code className="mr-2 h-4 w-4" />
+                Desenvolvimento
+              </TabsTrigger>
+              <TabsTrigger value="ecommerce-serv" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                <ShoppingCart className="mr-2 h-4 w-4" />
+                E-commerce
+              </TabsTrigger>
+              <TabsTrigger value="automacao" className="data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+                <Settings className="mr-2 h-4 w-4" />
+                Automação
+              </TabsTrigger>
+            </TabsList>
+
+            {/* Marketing Tab */}
+            <TabsContent value="marketing" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <Target className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge className="bg-primary/20 text-primary">Mais Procurado</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Tráfego Pago Premium</CardTitle>
+                    <CardDescription>Google Ads + Facebook Ads otimizados para conversão</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Setup completo das campanhas</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Otimização diária por IA</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Relatórios semanais detalhados</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />ROI garantido em 30 dias</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-primary">AOA 150.000</span><span className="text-sm text-muted-foreground">/mês</span></div>
+                        <div className="flex items-center"><Star className="h-4 w-4 text-secondary fill-current" /><span className="text-sm ml-1">4.9</span></div>
+                      </div>
+                      <Button className="w-full bg-primary hover:bg-primary/90" asChild><a href="/contato">Começar Agora</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                        <TrendingUp className="h-6 w-6 text-secondary" />
+                      </div>
+                      <Badge className="bg-secondary/20 text-secondary">SEO Pro</Badge>
+                    </div>
+                    <CardTitle className="text-xl">SEO Dominação Total</CardTitle>
+                    <CardDescription>Primeira página do Google em 90 dias garantidos</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Auditoria técnica completa</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Otimização on-page e off-page</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Link building premium</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Monitoramento 24/7</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-secondary">AOA 100.000</span><span className="text-sm text-muted-foreground">/mês</span></div>
+                        <div className="flex items-center"><Star className="h-4 w-4 text-secondary fill-current" /><span className="text-sm ml-1">4.8</span></div>
+                      </div>
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild><a href="/contato">Dominar Google</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <Users className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge variant="outline">Social Media</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Gestão de Redes Sociais</CardTitle>
+                    <CardDescription>Presença digital que converte seguidores em clientes</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Conteúdo diário personalizado</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Stories e reels profissionais</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Engajamento ativo</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Relatórios de performance</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-primary">AOA 75.000</span><span className="text-sm text-muted-foreground">/mês</span></div>
+                        <div className="flex items-center"><Star className="h-4 w-4 text-secondary fill-current" /><span className="text-sm ml-1">4.7</span></div>
+                      </div>
+                      <Button className="w-full bg-transparent" variant="outline" asChild><a href="/contato">Crescer nas Redes</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+
+            {/* Desenvolvimento Tab */}
+            <TabsContent value="desenvolvimento" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                        <Code className="h-6 w-6 text-secondary" />
+                      </div>
+                      <Badge className="bg-secondary/20 text-secondary">Full Stack</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Desenvolvimento Completo</CardTitle>
+                    <CardDescription>Sites, apps e sistemas sob medida para seu negócio</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />React, Next.js, Node.js</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Design responsivo premium</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Integração com APIs</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Deploy e manutenção</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-secondary">AOA 200.000</span><span className="text-sm text-muted-foreground">/projeto</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">30 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild><a href="/contato">Solicitar Orçamento</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <Database className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge className="bg-primary/20 text-primary">Enterprise</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Sistema ERP Personalizado</CardTitle>
+                    <CardDescription>Gestão empresarial integrada e automatizada</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Módulos personalizados</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Integração contábil/fiscal</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Relatórios avançados</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Suporte dedicado</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-primary">AOA 500.000</span><span className="text-sm text-muted-foreground">/projeto</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">90 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-primary hover:bg-primary/90" asChild><a href="/contato">Transformar Gestão</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                        <Smartphone className="h-6 w-6 text-secondary" />
+                      </div>
+                      <Badge variant="outline">Mobile</Badge>
+                    </div>
+                    <CardTitle className="text-xl">App Mobile Nativo</CardTitle>
+                    <CardDescription>Aplicativo iOS e Android para seu negócio</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />React Native / Flutter</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Push notifications</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Publicação nas stores</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Analytics integrado</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-secondary">AOA 350.000</span><span className="text-sm text-muted-foreground">/projeto</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">60 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-transparent" variant="outline" asChild><a href="/contato">Criar App</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+
+            {/* E-commerce Serviços Tab */}
+            <TabsContent value="ecommerce-serv" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <ShoppingCart className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge className="bg-primary/20 text-primary">Conversão Alta</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Loja Virtual Premium</CardTitle>
+                    <CardDescription>E-commerce otimizado para vendas 24/7</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Design focado em conversão</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Pagamentos integrados</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Gestão de estoque</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />SEO otimizado</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-primary">AOA 180.000</span><span className="text-sm text-muted-foreground">/projeto</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">21 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-primary hover:bg-primary/90" asChild><a href="/contato">Criar Loja Agora</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                        <Globe className="h-6 w-6 text-secondary" />
+                      </div>
+                      <Badge className="bg-secondary/20 text-secondary">Landing Page</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Landing Page Conversora</CardTitle>
+                    <CardDescription>Páginas que transformam visitantes em clientes</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Copywriting persuasivo</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Design psicológico</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />A/B testing incluso</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Analytics avançado</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-secondary">AOA 60.000</span><span className="text-sm text-muted-foreground">/página</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">7 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild><a href="/contato">Converter Mais</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <BookOpen className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge variant="outline">Digital</Badge>
+                    </div>
+                    <CardTitle className="text-xl">E-books & Infoprodutos</CardTitle>
+                    <CardDescription>Criação e monetização de produtos digitais</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Conteúdo especializado</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Design profissional</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Plataforma de vendas</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Estratégia de lançamento</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-primary">AOA 80.000</span><span className="text-sm text-muted-foreground">/produto</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">14 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-transparent" variant="outline" asChild><a href="/contato">Monetizar Conhecimento</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+
+            {/* Automation Tab */}
+            <TabsContent value="automacao" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                        <Zap className="h-6 w-6 text-secondary" />
+                      </div>
+                      <Badge className="bg-secondary/20 text-secondary">IA Powered</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Automação de Processos</CardTitle>
+                    <CardDescription>Elimine tarefas repetitivas e ganhe produtividade</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Workflows inteligentes</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Integração com sistemas</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Notificações automáticas</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Relatórios em tempo real</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-secondary">AOA 90.000</span><span className="text-sm text-muted-foreground">/processo</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">10 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild><a href="/contato">Automatizar Agora</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <BarChart3 className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge className="bg-primary/20 text-primary">Analytics</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Dashboard Executivo</CardTitle>
+                    <CardDescription>Visualização inteligente de dados empresariais</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />KPIs personalizados</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Gráficos interativos</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Alertas inteligentes</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Acesso mobile</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-primary">AOA 120.000</span><span className="text-sm text-muted-foreground">/dashboard</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">15 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-primary hover:bg-primary/90" asChild><a href="/contato">Visualizar Dados</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:border-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                        <Settings className="h-6 w-6 text-secondary" />
+                      </div>
+                      <Badge variant="outline">Integração</Badge>
+                    </div>
+                    <CardTitle className="text-xl">Integração de Sistemas</CardTitle>
+                    <CardDescription>Conecte todas as ferramentas do seu negócio</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />APIs personalizadas</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Sincronização em tempo real</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Backup automático</div>
+                      <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Monitoramento 24/7</div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between mb-4">
+                        <div><span className="text-2xl font-bold text-secondary">AOA 160.000</span><span className="text-sm text-muted-foreground">/integração</span></div>
+                        <div className="flex items-center"><Clock className="h-4 w-4 text-muted-foreground mr-1" /><span className="text-sm">20 dias</span></div>
+                      </div>
+                      <Button className="w-full bg-transparent" variant="outline" asChild><a href="/contato">Conectar Sistemas</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-16 bg-card/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Pacotes Completos</h2>
+            <p className="text-muted-foreground">Soluções integradas para acelerar seu crescimento</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="relative">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Starter</CardTitle>
+                <CardDescription>Ideal para pequenas empresas</CardDescription>
+                <div className="mt-4"><span className="text-4xl font-bold text-primary">AOA 150.000</span><span className="text-muted-foreground">/mês</span></div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Site institucional</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />SEO básico</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Gestão de redes sociais</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Suporte por email</div>
+                </div>
+                <Button className="w-full mt-6" asChild><a href="/contato">Começar Agora</a></Button>
+              </CardContent>
+            </Card>
+
+            <Card className="relative border-primary/50 shadow-lg shadow-primary/10">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-primary text-primary-foreground">Mais Popular</Badge>
+              </div>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Growth</CardTitle>
+                <CardDescription>Para empresas em crescimento</CardDescription>
+                <div className="mt-4"><span className="text-4xl font-bold text-primary">AOA 300.000</span><span className="text-muted-foreground">/mês</span></div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Tudo do Starter +</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />E-commerce completo</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Tráfego pago otimizado</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Automação de processos</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-primary mr-2" />Suporte prioritário</div>
+                </div>
+                <Button className="w-full mt-6 bg-primary hover:bg-primary/90" asChild><a href="/contato">Acelerar Crescimento</a></Button>
+              </CardContent>
+            </Card>
+
+            <Card className="relative">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Enterprise</CardTitle>
+                <CardDescription>Soluções corporativas completas</CardDescription>
+                <div className="mt-4"><span className="text-4xl font-bold text-secondary">AOA 600.000</span><span className="text-muted-foreground">/mês</span></div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Tudo do Growth +</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Sistema ERP personalizado</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />App mobile nativo</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Dashboard executivo</div>
+                  <div className="flex items-center text-sm"><CheckCircle className="h-4 w-4 text-secondary mr-2" />Gerente dedicado</div>
+                </div>
+                <Button className="w-full mt-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild><a href="/contato">Dominar Mercado</a></Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-16 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1108,19 +1576,19 @@ export default function ProdutosPage() {
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
                 <Shield className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Garantia Estendida</h3>
+              <h3 className="text-xl font-semibold">Suporte & Garantia</h3>
               <p className="text-muted-foreground">
-                Até 5 anos de garantia em produtos selecionados com suporte técnico especializado
+                Suporte técnico especializado com atendimento próximo na Huíla e suporte remoto ágil para clientes em todo o território nacional.
               </p>
             </div>
 
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto">
-                <Truck className="h-8 w-8 text-secondary" />
+                <Globe className="h-8 w-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-semibold">Entrega Expressa</h3>
+              <h3 className="text-xl font-semibold">Alcance Nacional</h3>
               <p className="text-muted-foreground">
-                Entrega em 24h para São Paulo e região metropolitana. Frete grátis acima de R$ 500
+                Desenvolvimento e entrega de sistemas e softwares para empresas de Cabinda ao Cunene, com a confiança de uma sede física no Lubango.
               </p>
             </div>
 
@@ -1128,9 +1596,9 @@ export default function ProdutosPage() {
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
                 <CheckCircle className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Produtos Testados</h3>
+              <h3 className="text-xl font-semibold">Qualidade de Software</h3>
               <p className="text-muted-foreground">
-                Todos os produtos passam por rigorosos testes de qualidade antes do envio
+                Todas as nossas soluções digitais passam por testes rigorosos de segurança e performance, garantindo sistemas robustos e escaláveis.
               </p>
             </div>
           </div>

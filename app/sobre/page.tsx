@@ -33,7 +33,7 @@ export default function SobrePage() {
             <Badge className="bg-primary/20 text-primary border-primary/30 text-lg px-4 py-2">Nossa História</Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-balance">
               Transformando <span className="text-primary">Negócios</span> Desde
-              <span className="text-secondary"> 2019</span>
+              <span className="text-secondary"> 2020</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
               Somos especialistas em elevar empresas ao próximo nível através de tecnologia de ponta e estratégias
@@ -48,7 +48,7 @@ export default function SobrePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">500+</div>
+              <div className="text-4xl font-bold text-primary">10+</div>
               <div className="text-muted-foreground">Projetos Entregues</div>
             </div>
             <div className="space-y-2">
@@ -139,16 +139,19 @@ export default function SobrePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center group hover:border-primary/50 transition-all duration-300">
               <CardHeader>
-                <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-12 w-12 text-primary" />
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-all">
+                  <img
+                    src="/Alfredo Teixeira.png"
+                    alt="Alfredo Teixeira"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <CardTitle className="text-xl">Carlos Silva</CardTitle>
+                <CardTitle className="text-xl">Alfredo Teixeira</CardTitle>
                 <CardDescription>CEO & Fundador</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  15+ anos em transformação digital. Ex-Google e Microsoft. Especialista em estratégias de crescimento
-                  exponencial.
+                  Visionário e especialista em estratégias de crescimento digital com mais de 15 anos de experiência. Lidera a MTO com o foco em transformar negócios angolanos através da inovação exponencial.
                 </p>
                 <div className="flex justify-center space-x-2">
                   <Badge variant="outline" className="text-xs">
@@ -163,23 +166,26 @@ export default function SobrePage() {
 
             <Card className="text-center group hover:border-secondary/50 transition-all duration-300">
               <CardHeader>
-                <div className="w-24 h-24 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="h-12 w-12 text-secondary" />
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary/20 group-hover:border-secondary/50 transition-all">
+                  <img
+                    src="/Doctor Xteixy.png"
+                    alt="Doctor Xteixy"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <CardTitle className="text-xl">Ana Costa</CardTitle>
-                <CardDescription>CTO & Co-fundadora</CardDescription>
+                <CardTitle className="text-xl">Doctor Xteixy</CardTitle>
+                <CardDescription>CTO & Co-fundador</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Arquiteta de software sênior. Ex-Amazon e Uber. Especialista em sistemas escaláveis e arquiteturas
-                  complexas.
+                  Génio técnico e arquiteto de software sénior. Especialista em IA e sistemas de alta performance, é o cérebro por trás de toda a infraestrutura tecnológica avançada que move a MTO.
                 </p>
                 <div className="flex justify-center space-x-2">
                   <Badge variant="outline" className="text-xs">
                     Full Stack
                   </Badge>
                   <Badge variant="outline" className="text-xs">
-                    DevOps
+                    AI Specialist
                   </Badge>
                 </div>
               </CardContent>
@@ -187,23 +193,26 @@ export default function SobrePage() {
 
             <Card className="text-center group hover:border-primary/50 transition-all duration-300">
               <CardHeader>
-                <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="h-12 w-12 text-primary" />
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-all">
+                  <img
+                    src="/Cláudio Marcos.png"
+                    alt="Cláudio Marcos"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <CardTitle className="text-xl">Roberto Lima</CardTitle>
+                <CardTitle className="text-xl">Cláudio Marcos</CardTitle>
                 <CardDescription>Head of Marketing</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Especialista em performance marketing. Ex-Facebook e LinkedIn. Responsável por gerar R$ 50M+ em
-                  vendas.
+                  Estrategista de performance marketing com histórico comprovado de milhões gerados em faturamento. Especialista em tráfego pago e análise de dados para escala de negócios.
                 </p>
                 <div className="flex justify-center space-x-2">
                   <Badge variant="outline" className="text-xs">
                     Paid Ads
                   </Badge>
                   <Badge variant="outline" className="text-xs">
-                    Analytics
+                    Marketing Pro
                   </Badge>
                 </div>
               </CardContent>
@@ -229,13 +238,13 @@ export default function SobrePage() {
                   <Badge className="bg-primary/20 text-primary">E-commerce</Badge>
                   <div className="text-2xl font-bold text-primary">+450%</div>
                 </div>
-                <CardTitle className="text-xl">TechStore Brasil</CardTitle>
-                <CardDescription>Loja de eletrônicos online</CardDescription>
+                <CardTitle className="text-xl">ernice.com</CardTitle>
+                <CardDescription>Loja de computadores e eletrónicos em Huíla, Lubango</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Transformamos uma pequena loja física em um e-commerce líder, aumentando o faturamento de R$ 50k para
-                  R$ 275k mensais em apenas 8 meses.
+                  Transformamos uma pequena loja física em um e-commerce líder, aumentando o faturamento de 10M para
+                  50M de Kwanzas mensais em apenas 8 meses.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center text-sm">
@@ -260,7 +269,7 @@ export default function SobrePage() {
                   <Badge className="bg-secondary/20 text-secondary">SaaS</Badge>
                   <div className="text-2xl font-bold text-secondary">+320%</div>
                 </div>
-                <CardTitle className="text-xl">GestãoPro</CardTitle>
+                <CardTitle className="text-xl">Gestão Pro Híbrido</CardTitle>
                 <CardDescription>Software de gestão empresarial</CardDescription>
               </CardHeader>
               <CardContent>
@@ -306,8 +315,8 @@ export default function SobrePage() {
                     <Quote className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <CardTitle className="text-lg">Marina Santos</CardTitle>
-                    <CardDescription>CEO, Fashion Plus</CardDescription>
+                    <CardTitle className="text-lg">Antônio Ernesto</CardTitle>
+                    <CardDescription>CEO da ernice.com</CardDescription>
                   </div>
                 </div>
               </CardHeader>
@@ -331,8 +340,8 @@ export default function SobrePage() {
                     <Quote className="h-6 w-6 text-secondary" />
                   </div>
                   <div>
-                    <CardTitle className="text-lg">João Oliveira</CardTitle>
-                    <CardDescription>Diretor, AutoPeças SP</CardDescription>
+                    <CardTitle className="text-lg">João Silva</CardTitle>
+                    <CardDescription>Diretor, Auto-peças Lubango</CardDescription>
                   </div>
                 </div>
               </CardHeader>
@@ -387,7 +396,7 @@ export default function SobrePage() {
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-2xl mx-auto">
             <div className="flex items-center space-x-6">
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
@@ -395,40 +404,10 @@ export default function SobrePage() {
                 </div>
               </div>
               <div>
-                <div className="text-lg font-semibold text-primary">2019</div>
+                <div className="text-lg font-semibold text-primary">2020</div>
                 <div className="text-xl font-bold">Fundação da MTO</div>
                 <p className="text-muted-foreground">
-                  Início das operações com foco em soluções digitais para pequenas e médias empresas.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                  <Award className="h-6 w-6 text-secondary" />
-                </div>
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-secondary">2021</div>
-                <div className="text-xl font-bold">Primeiro Prêmio</div>
-                <p className="text-muted-foreground">
-                  Reconhecimento como "Melhor Agência Digital" pela Associação Brasileira de Startups.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-primary" />
-                </div>
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-primary">2023</div>
-                <div className="text-xl font-bold">Expansão Nacional</div>
-                <p className="text-muted-foreground">
-                  Abertura de escritórios em São Paulo, Rio de Janeiro e Belo Horizonte.
+                  Início das operações com foco em soluções digitais para pequenas e médias empresas em Angola.
                 </p>
               </div>
             </div>
@@ -440,10 +419,10 @@ export default function SobrePage() {
                 </div>
               </div>
               <div>
-                <div className="text-lg font-semibold text-secondary">2024</div>
+                <div className="text-lg font-semibold text-secondary">2025</div>
                 <div className="text-xl font-bold">Liderança de Mercado</div>
                 <p className="text-muted-foreground">
-                  Consolidação como referência nacional em transformação digital empresarial.
+                  Consolidação como referência nacional em transformação digital empresarial e soluções de IA.
                 </p>
               </div>
             </div>
@@ -461,60 +440,33 @@ export default function SobrePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="max-w-2xl mx-auto">
             <Card className="text-center group hover:border-primary/50 transition-all duration-300">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl">São Paulo - Matriz</CardTitle>
+                <CardTitle className="text-xl">Sede Principal - Huíla</CardTitle>
+                <CardDescription>Huíla, Angola</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-muted-foreground">Av. Paulista, 1000 - Sala 1501</p>
-                <p className="text-muted-foreground">Bela Vista, São Paulo - SP</p>
-                <p className="text-muted-foreground">CEP: 01310-100</p>
-                <div className="flex items-center justify-center space-x-4 mt-4">
-                  <div className="flex items-center text-sm">
-                    <Phone className="h-4 w-4 text-primary mr-2" />
-                    (11) 99999-9999
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground italic">"Escritório estrategicamente localizado para melhor servir o mercado nacional"</p>
+                <div className="space-y-2">
+                  <p className="font-bold">Rua Deolinda Rodrigues, Lubango</p>
+                  <div className="flex flex-col items-center gap-2 mt-4">
+                    <div className="flex items-center text-sm">
+                      <Phone className="h-4 w-4 text-primary mr-2" />
+                      937 500 709
+                    </div>
+                    <div className="flex items-center text-sm">
+                      <Mail className="h-4 w-4 text-primary mr-2" />
+                      doctorxteixy@gmail.com
+                    </div>
+                    <div className="flex items-center text-sm mt-2">
+                      <Calendar className="h-4 w-4 text-secondary mr-2" />
+                      Seg-Sex: 8h às 18h
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center group hover:border-secondary/50 transition-all duration-300">
-              <CardHeader>
-                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-8 w-8 text-secondary" />
-                </div>
-                <CardTitle className="text-xl">Rio de Janeiro</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-muted-foreground">Av. Rio Branco, 156 - Sala 2801</p>
-                <p className="text-muted-foreground">Centro, Rio de Janeiro - RJ</p>
-                <p className="text-muted-foreground">CEP: 20040-020</p>
-                <div className="flex items-center justify-center space-x-4 mt-4">
-                  <div className="flex items-center text-sm">
-                    <Phone className="h-4 w-4 text-secondary mr-2" />
-                    (21) 99999-9999
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center group hover:border-primary/50 transition-all duration-300">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-xl">Contato Geral</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-muted-foreground">contato@mto.com.br</p>
-                <p className="text-muted-foreground">vendas@mto.com.br</p>
-                <p className="text-muted-foreground">suporte@mto.com.br</p>
-                <div className="flex items-center justify-center space-x-4 mt-4">
-                  <div className="text-sm text-muted-foreground">Seg-Sex: 8h às 18h</div>
                 </div>
               </CardContent>
             </Card>

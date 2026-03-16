@@ -11,13 +11,35 @@ import Image from "next/image"
 export default function EbooksPage() {
   const ebooks = [
     {
+      id: 0,
+      title: "Segredos da Importação da China",
+      subtitle: "Compres por 10 e Venda por 100",
+      description:
+        "Aprenda a importar da China várias vezes com desconto na primeira compra de 90%! Entenda como comprar produtos com preços baixíssimos e vender em Angola para ter o dobro ou mais do lucro. O mapa definitivo para o e-commerce de sucesso.",
+      price: "AOA 15.000",
+      originalPrice: "AOA 45.000",
+      rating: 5.0,
+      reviews: 4892,
+      pages: 180,
+      readTime: "4h",
+      category: "Importação",
+      bestseller: true,
+      image: "/importação.png",
+      features: [
+        "Desconto de 90% na 1ª Compra",
+        "Lista de Fornecedores Gold",
+        "Logística China -> Angola",
+        "Bônus: Grupo de Importadores",
+      ],
+    },
+    {
       id: 1,
       title: "Como Criar uma Renda Extra",
       subtitle: "Vendendo Produtos Digitais",
       description:
         "Descubra como transformar suas habilidades em produtos digitais lucrativos e criar uma renda extra sustentável através do marketing digital.",
-      price: "R$ 97",
-      originalPrice: "R$ 297",
+      price: "AOA 2.000",
+      originalPrice: "AOA 5.000",
       rating: 4.9,
       reviews: 3421,
       pages: 245,
@@ -38,8 +60,8 @@ export default function EbooksPage() {
       subtitle: "Estratégias Secretas dos Top 1%",
       description:
         "Descubra as táticas avançadas que apenas 1% dos profissionais conhecem para dominar o marketing digital e multiplicar resultados.",
-      price: "R$ 197",
-      originalPrice: "R$ 497",
+      price: "AOA 12.000",
+      originalPrice: "AOA 25.000",
       rating: 4.9,
       reviews: 2847,
       pages: 312,
@@ -60,8 +82,8 @@ export default function EbooksPage() {
       subtitle: "Domine o Google em 90 Dias",
       description:
         "O guia definitivo para rankear no topo do Google com técnicas atualizadas e estratégias que realmente funcionam.",
-      price: "R$ 147",
-      originalPrice: "R$ 397",
+      price: "AOA 5.000",
+      originalPrice: "AOA 10.000",
       rating: 4.8,
       reviews: 1923,
       pages: 248,
@@ -77,8 +99,8 @@ export default function EbooksPage() {
       subtitle: "Do Zero ao Primeiro Milhão",
       description:
         "Sistema completo para criar e escalar um e-commerce lucrativo, com estratégias testadas e aprovadas.",
-      price: "R$ 247",
-      originalPrice: "R$ 697",
+      price: "AOA 12.000",
+      originalPrice: "AOA 28.000",
       rating: 4.9,
       reviews: 1456,
       pages: 387,
@@ -99,8 +121,8 @@ export default function EbooksPage() {
       subtitle: "Sistemas que Trabalham por Você",
       description:
         "Aprenda a criar sistemas automatizados que otimizam processos e aumentam a produtividade em até 300%.",
-      price: "R$ 167",
-      originalPrice: "R$ 447",
+      price: "AOA 10.000",
+      originalPrice: "AOA 18.000",
       rating: 4.7,
       reviews: 892,
       pages: 195,
@@ -116,8 +138,8 @@ export default function EbooksPage() {
       subtitle: "Facebook e Google Ads Masterclass",
       description:
         "Domine as plataformas de tráfego pago e transforme investimento em lucro com estratégias de alta conversão.",
-      price: "R$ 177",
-      originalPrice: "R$ 497",
+      price: "AOA 12.000",
+      originalPrice: "AOA 22.000",
       rating: 4.8,
       reviews: 2156,
       pages: 289,
@@ -137,8 +159,8 @@ export default function EbooksPage() {
       title: "Desenvolvimento Full Stack",
       subtitle: "Do Iniciante ao Expert",
       description: "Torne-se um desenvolvedor completo com este guia prático que cobre front-end, back-end e DevOps.",
-      price: "R$ 197",
-      originalPrice: "R$ 597",
+      price: "AOA 12.000",
+      originalPrice: "AOA 25.000",
       rating: 4.9,
       reviews: 1678,
       pages: 456,
@@ -150,7 +172,7 @@ export default function EbooksPage() {
     },
   ]
 
-  const categories = ["Todos", "Renda Extra", "Marketing", "SEO", "E-commerce", "Automação", "Tráfego Pago", "Desenvolvimento"]
+  const categories = ["Todos", "Importação", "Renda Extra", "Marketing", "SEO", "E-commerce", "Automação", "Tráfego Pago", "Desenvolvimento"]
 
   return (
     <div className="min-h-screen bg-background">
@@ -216,114 +238,149 @@ export default function EbooksPage() {
       {/* E-books Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {ebooks.map((ebook, index) => (
-              <Card
-                key={ebook.id}
-                className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 glass-card border-primary/20 animate-fade-in-up h-full"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader className="relative p-0">
-                  {ebook.bestseller && (
-                    <Badge className="absolute top-4 left-4 z-10 bg-gradient-to-r from-yellow-500 to-orange-500 text-black border-0">
-                      <Award className="w-3 h-3 mr-1" />
-                      Bestseller
+
+          {/* ── FEATURED – Importação da China ── */}
+          {ebooks.filter(e => e.id === 0).map((ebook) => (
+            <div key={ebook.id} className="mb-16 flex justify-center">
+              {/* Shining animated border wrapper */}
+              <div className="relative p-[3px] rounded-2xl ebook-shine-border animate-ebook-featured"
+                style={{ maxWidth: 520, width: "100%" }}>
+                <div className="relative rounded-2xl overflow-hidden bg-card">
+
+                  {/* ⭐ Badges row */}
+                  <div className="absolute top-4 left-4 z-20 flex gap-2 flex-wrap">
+                    <Badge className="animate-badge-pop bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 text-black border-0 text-sm font-bold px-3 py-1 shadow-lg">
+                      🏆 #1 Mais Vendido
                     </Badge>
-                  )}
-                  <div className="relative h-52 overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                    <Badge className="bg-green-500 text-white border-0 text-sm font-bold px-3 py-1 shadow-lg">
+                      ✅ Disponível!
+                    </Badge>
+                  </div>
+
+                  {/* Discount ribbon */}
+                  <div className="absolute top-0 right-0 z-20">
+                    <div className="bg-gradient-to-br from-red-500 to-pink-600 text-white text-xs font-bold px-4 py-6 text-center shadow-lg"
+                      style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)", width: 80, height: 80 }}>
+                    </div>
+                    <div className="absolute top-3 right-1 text-white text-xs font-black text-center leading-tight rotate-45" style={{ width: 52 }}>
+                      <div>90%</div>
+                      <div>OFF</div>
+                    </div>
+                  </div>
+
+                  {/* Image */}
+                  <div className="relative h-72 overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10">
                     <Image
                       src={ebook.image || "/placeholder.svg"}
                       alt={ebook.title}
                       fill
-                      className="object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="object-contain transition-transform duration-700 hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-                  </div>
-                </CardHeader>
-
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant="secondary" className="text-xs">
-                      {ebook.category}
-                    </Badge>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">{ebook.rating}</span>
-                      <span className="text-xs text-muted-foreground">({ebook.reviews})</span>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
 
-                  <h3 className="text-base font-bold mb-2 group-hover:text-primary transition-colors">{ebook.title}</h3>
-                  <p className="text-sm text-primary font-medium mb-2">{ebook.subtitle}</p>
-                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">{ebook.description}</p>
-
-                  <div className="flex items-center justify-between text-xs text-muted-foreground mb-3">
-                    <div className="flex items-center">
-                      <BookOpen className="w-4 h-4 mr-1" />
-                      {ebook.pages} páginas
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {ebook.readTime} leitura
-                    </div>
-                  </div>
-
-                  <div className="space-y-1 mb-2">
-                    {ebook.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm">
-                        <Zap className="w-3 h-3 text-primary mr-2 flex-shrink-0" />
-                        {feature}
+                  <div className="p-6">
+                    {/* Rating */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-
-                <CardFooter className="p-4 pt-0">
-                  <div className="w-full">
-                    <div className="flex items-center justify-between mb-3">
-                      <div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-2xl font-bold text-primary">{ebook.price}</span>
-                          <span className="text-sm text-muted-foreground line-through">{ebook.originalPrice}</span>
-                        </div>
-                        <div className="text-xs text-green-500 font-medium">
-                          Economia de{" "}
-                          {Math.round(
-                            (1 -
-                              Number.parseInt(ebook.price.replace("R$ ", "")) /
-                                Number.parseInt(ebook.originalPrice.replace("R$ ", ""))) *
-                              100,
-                          )}
-                          %
-                        </div>
-                      </div>
+                      <span className="text-sm font-bold text-yellow-400">{ebook.rating}</span>
+                      <span className="text-xs text-muted-foreground">({ebook.reviews.toLocaleString()} avaliações)</span>
                     </div>
 
+                    <h3 className="text-2xl font-black mb-1 text-foreground">{ebook.title}</h3>
+                    <p className="text-primary font-semibold text-base mb-3">{ebook.subtitle}</p>
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{ebook.description}</p>
+
+                    {/* Features */}
+                    <div className="grid grid-cols-2 gap-2 mb-5">
+                      {ebook.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center text-sm bg-primary/10 rounded-lg px-3 py-1.5">
+                          <Zap className="w-3 h-3 text-primary mr-2 flex-shrink-0" />
+                          <span className="font-medium">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Price */}
+                    <div className="flex items-center gap-3 mb-5">
+                      <span className="text-3xl font-black text-primary">{ebook.price}</span>
+                      <span className="text-base text-muted-foreground line-through">{ebook.originalPrice}</span>
+                      <Badge className="bg-green-500/20 text-green-400 border-green-500/30 text-xs">
+                        67% OFF
+                      </Badge>
+                    </div>
+
+                    {/* CTA Buttons */}
                     <div className="space-y-3">
-                      <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-medium group">
-                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                        Comprar Agora
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <Button className="w-full text-base font-bold py-6 bg-gradient-to-r from-primary via-pink-500 to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:scale-[1.02]">
+                        <Download className="w-5 h-5 mr-2" />
+                        Comprar Agora — {ebook.price}
+                        <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
-                      
-                      <Button 
-                        variant="outline" 
-                        className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors"
+                      <button
+                        className="w-full py-4 rounded-lg text-base font-bold transition-all duration-300 cursor-pointer animate-whatsapp-cta"
                         onClick={() => {
                           const message = encodeURIComponent(`Olá! Gostaria de adquirir o ebook "${ebook.title}" por ${ebook.price}. Como faço para comprar?`);
                           window.open(`https://wa.me/937500709?text=${message}`, '_blank');
                         }}
                       >
-                        💬 WhatsApp
-                      </Button>
+                        💬 Pedir via WhatsApp
+                      </button>
                     </div>
                   </div>
-                </CardFooter>
-              </Card>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* ── Outros E-books – Brevemente Disponíveis ── */}
+          <div className="text-center mb-10">
+            <Badge className="bg-muted text-muted-foreground border-border text-sm px-4 py-1.5">
+              📚 Mais e-books chegando em breve...
+            </Badge>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {ebooks.filter(e => e.id !== 0).map((ebook, index) => (
+              <div key={ebook.id} className="relative animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+                {/* Dimmed card */}
+                <Card className="h-full glass-card border-border/30 opacity-50 blur-[1px] select-none pointer-events-none">
+                  <CardHeader className="relative p-0">
+                    <div className="relative h-52 overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                      <Image
+                        src={ebook.image || "/placeholder.svg"}
+                        alt={ebook.title}
+                        fill
+                        className="object-contain grayscale"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-4">
+                    <h3 className="text-base font-bold mb-1">{ebook.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-2">{ebook.subtitle}</p>
+                    <p className="text-muted-foreground text-sm line-clamp-2">{ebook.description}</p>
+                  </CardContent>
+                </Card>
+
+                {/* Overlay: "Brevemente Disponível" */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center rounded-xl z-10">
+                  <div className="bg-background/80 backdrop-blur-sm rounded-2xl px-6 py-4 text-center border border-border shadow-xl">
+                    <div className="text-2xl mb-2">🔒</div>
+                    <div className="text-sm font-bold text-foreground">Brevemente Disponível</div>
+                    <div className="text-xs text-muted-foreground mt-1">Em preparação...</div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10">
