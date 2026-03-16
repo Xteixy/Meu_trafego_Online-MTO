@@ -166,7 +166,7 @@ O segredo utilizando estas ferramentas não está em usar todas ao mesmo tempo, 
         accentColor: "yellow-400",
         featured: false,
         emoji: "⚡",
-        image: "/Toolkit do Produtor As 10 Melhores IAs de 2025.png"
+        image: "/toolkit-produtor-ias-2025.png"
     },
     {
         id: 6,
@@ -199,7 +199,7 @@ A conformidade regulatória é um tema emergente em Angola. À medida que a legi
         accentColor: "emerald-400",
         featured: false,
         emoji: "🔐",
-        image: "/Segurança com IA Proteja Dados Sem Frear a Inovação.png"
+        image: "/seguranca-ia-inovacao.png"
     },
     {
         id: 7,
@@ -232,6 +232,6 @@ Para implementar personalização com IA numa loja online angolana, não é nece
         accentColor: "primary",
         featured: false,
         emoji: "🛍️",
-        image: "/Personalização no E-commerce O Fim das Sugestões Genéricas.png"
+        image: "/personalizacao-ecommerce.png"
     },
 ]

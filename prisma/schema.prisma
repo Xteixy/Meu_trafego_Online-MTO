@@ -23,6 +23,7 @@ model User {
   name      String
   company   String?
   phone     String?
+  role      Role     @default(CLIENT)
   plan      Plan     @default(STARTER)
   avatar    String?
   isActive  Boolean  @default(true)
@@ -161,6 +162,12 @@ model Contact {
 // ========================================
 // ENUMS
 // ========================================
+
+enum Role {
+  ADMIN
+  SUPPORT
+  CLIENT
+}
 
 enum Plan {
   STARTER      // Plano básico

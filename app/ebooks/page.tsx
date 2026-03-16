@@ -24,7 +24,7 @@ export default function EbooksPage() {
       readTime: "4h",
       category: "Importação",
       bestseller: true,
-      image: "/importação.png",
+      image: "/importacao.png",
       features: [
         "Desconto de 90% na 1ª Compra",
         "Lista de Fornecedores Gold",
@@ -46,7 +46,7 @@ export default function EbooksPage() {
       readTime: "5h",
       category: "Renda Extra",
       bestseller: true,
-      image: "/renda extra.png",
+      image: "/renda-extra.png",
       features: [
         "7 Estratégias de Monetização",
         "Templates de Produtos Digitais",

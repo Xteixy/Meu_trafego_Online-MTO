@@ -141,7 +141,7 @@ export default function SobrePage() {
               <CardHeader>
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-all">
                   <img
-                    src="/Alfredo Teixeira.png"
+                    src="/alfredo-teixeira.png"
                     alt="Alfredo Teixeira"
                     className="w-full h-full object-cover"
                   />
@@ -168,7 +168,7 @@ export default function SobrePage() {
               <CardHeader>
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary/20 group-hover:border-secondary/50 transition-all">
                   <img
-                    src="/Doctor Xteixy.png"
+                    src="/doctor-xteixy.png"
                     alt="Doctor Xteixy"
                     className="w-full h-full object-cover"
                   />
@@ -195,7 +195,7 @@ export default function SobrePage() {
               <CardHeader>
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-all">
                   <img
-                    src="/Cláudio Marcos.png"
+                    src="/claudio-marcos.png"
                     alt="Cláudio Marcos"
                     className="w-full h-full object-cover"
                   />
