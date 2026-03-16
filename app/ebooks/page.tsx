@@ -46,7 +46,7 @@ export default function EbooksPage() {
       readTime: "5h",
       category: "Renda Extra",
       bestseller: true,
-      image: "/renda-extra.png",
+      image: "/renda-extra-1.webp",
       features: [
         "7 Estratégias de Monetização",
         "Templates de Produtos Digitais",
