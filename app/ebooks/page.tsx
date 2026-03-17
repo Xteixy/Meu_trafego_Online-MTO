@@ -16,7 +16,7 @@ export default function EbooksPage() {
       subtitle: "Compres por 10 e Venda por 100",
       description:
         "Aprenda a importar da China várias vezes com desconto na primeira compra de 90%! Entenda como comprar produtos com preços baixíssimos e vender em Angola para ter o dobro ou mais do lucro. O mapa definitivo para o e-commerce de sucesso.",
-      price: "AOA 15.000",
+      price: "AOA 12.000",
       originalPrice: "AOA 45.000",
       rating: 5.0,
       reviews: 4892,
